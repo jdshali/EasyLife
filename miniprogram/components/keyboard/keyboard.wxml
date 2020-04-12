@@ -1,0 +1,19 @@
+<view class="page-box">
+    <!-- 模拟键盘 -->
+    <view class="pay-keyboard">
+        <view class="pay-desc_wrap">
+            <view class="desc">
+                <text>备注：</text>
+                <input bindinput="handleDesc"></input>
+            </view>
+            <view class="value">
+                {{content || '0'}}
+            </view>
+        </view>
+        <view class="pay-key-container">
+            <block wx:for="{{keyboardVal}}" wx:key="index">
+                <view catchtap="inputMoney" data-money="{{item}}" class="pay-key-item {{index == 0 && 'border0'}} {{(index) % 4 !== 0 && 'border-l1'}}">{{item}}</view>
+            </block>
+        </view>
+    </view>
+</view>

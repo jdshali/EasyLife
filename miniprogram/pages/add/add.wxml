@@ -1,0 +1,27 @@
+<!--miniprogram/pages/add.wxml-->
+<!-- 顶部tab 吸顶-->
+<view class="c-top_box">
+	<view class="van-tabs__wrap">
+		<van-tabs type="card" color="#DA70D6">
+			<van-tab title="支出"></van-tab>
+			<van-tab title="收入"></van-tab>
+		</van-tabs>
+	</view>
+</view>
+
+<!-- 记账类型选择 -->
+<view class="c-category_box">
+	<view class="category_item" 
+    data-cid="{{item.cid}}"  
+    bindtap="addRecord"
+    wx:key="index"
+    wx:for="{{list}}"
+    >
+		<image class="category_logo" src="{{item.normal_url}}"></image>
+		<text class="category_text">{{item.category_name}}</text>
+	</view>
+</view>
+<van-popup show="{{ show }}" position="bottom"
+   bind:close="onClose">
+  <keyboard bindmyevent="onMyEvent"></keyboard>
+</van-popup>

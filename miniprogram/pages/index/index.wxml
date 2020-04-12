@@ -1,0 +1,51 @@
+<!--miniprogram/pages/index.wxml-->
+<view class="c-top_box">
+  <van-row class="top_box-section__title">
+    <van-col span="6">
+      <text class="title-first">2020年</text>
+    </van-col>
+    <van-col span="9">收入</van-col>
+    <van-col span="9">支出</van-col>
+  </van-row>
+  <van-row>
+    <van-col span="6">
+      <view class="section" class="title-first">
+        <picker mode="date" fields="month" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="section__title"> 04
+            <text class="small-desc">月</text>
+            <van-icon name="arrow-down" size="12px" />
+          </view>
+        </picker>
+      </view>
+    </van-col>
+    <van-col span="9">0.
+      <text class="small-desc">00</text>
+    </van-col>
+    <van-col span="9">0.
+      <text class="small-desc">00</text>
+    </van-col>
+  </van-row>
+</view>
+
+<!-- 详情 -->
+<view class="c-detail">
+  <view>
+    <van-cell-group>
+      <van-cell title="04月06日 星期一" value="支出：40" />
+    </van-cell-group>
+    <van-cell title="电费" value="-30" icon="location-o" />
+    <van-cell title="水费" value="-10" icon="location-o" />
+  </view>
+
+   <view>
+    <van-cell-group>
+      <van-cell title="04月06日 星期一" value="支出：40" />
+    </van-cell-group>
+    <van-cell title="电费" value="-30" icon="location-o" />
+    <van-cell title="水费" value="-10" icon="location-o" />
+  </view>
+</view>
+
+<button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>

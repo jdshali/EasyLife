@@ -1,0 +1,44 @@
+/* miniprogram/pages/add.wxss */
+/* 头部吸顶 */
+.c-top_box{
+  background-color: #00cc77;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.van-tabs__wrap{
+  width: 400rpx;
+  padding-bottom: 10rpx;
+  margin: auto;
+}
+/* 头部吸顶 */
+
+/* 记账类型 */
+.c-category_box{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  /* flex-direction: column; */
+  margin-top: 100rpx;
+  padding: 0 30rpx;
+
+}
+.category_item{
+  /* flex-grow: 1; */
+  width: 24%;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.category_logo{
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin: 0 auto;
+}
+.category_text{
+  font-size: 30rpx;
+  color: #333;
+}
+/* 记账类型 */
+  

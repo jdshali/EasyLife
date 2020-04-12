@@ -1,0 +1,61 @@
+<!--miniprogram/pages/charts.wxml-->
+<view class="c-top_box">
+  <view class="left-tab-view">
+    <van-tabs type="card" color="#DA70D6">
+      <van-tab title="支出"></van-tab>
+      <van-tab title="收入"></van-tab>
+    </van-tabs>
+  </view>
+  <view class="right-tab-view">
+    <van-tabs type="card" color="#DA70D6">
+      <van-tab title="周"></van-tab>
+      <van-tab title="月"></van-tab>
+      <van-tab title="年"></van-tab>
+    </van-tabs>
+  </view>
+</view>
+
+<!-- 横向滚动tabs切换 -->
+<view class="c-tap_box">
+  <van-tabs active="{{active}}">
+    <van-tab title="2019-11"></van-tab>
+    <van-tab title="2019-12"></van-tab>
+    <van-tab title="1月"></van-tab>
+    <van-tab title="2月"></van-tab>
+    <van-tab title="上月"></van-tab>
+    <van-tab title="本月"></van-tab>
+  </van-tabs>
+</view>
+
+<!-- 图表 -->
+<view class="c-tap_charts">
+  <view class="charts_title ui-pt-30">总支出：123,34.9</view>
+  <view class="charts_title ui-pt-15">平均值：134.9</view>
+  <view class="container">
+    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  </view>
+</view>
+
+<!-- 每日消费 -->
+<view class="c-list_detail">
+  <view class="item_wrap">
+      <view class="content_left">
+        <image class="content_left_logo" src="http://c.rs.shayujizhang.com/category_e_catering_selected.png">
+        </image>
+      </view>
+      <view class="content_right">
+        <view class="content_desc">
+          <view>孩子 37.1%</view>
+          <view>2466.9</view>
+        </view>
+        <van-progress
+          percentage="75"
+          pivot-text="紫色"
+          pivot-color="#7232dd"
+          show-pivot="{{showPivot}}"
+          stroke-width="4px"
+          color="linear-gradient(to right, #be99ff, #7232dd)"
+        />
+      </view>
+  </view>
+</view>
