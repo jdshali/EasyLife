@@ -28,8 +28,8 @@
       {
         "pagePath": "pages/add/add",
         "text": "新增",
-        "iconPath": "images/icon_sort_default.png",
-        "selectedIconPath": "images/icon_sort.png"
+        "iconPath": "images/icon_add_default.png",
+        "selectedIconPath": "images/icon_add.png"
       }
     ]
   },

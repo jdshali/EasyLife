@@ -1,7 +1,7 @@
 // miniprogram/pages/index.js
 import baseInfo from '../../common/baseData/index';
 const db = wx.cloud.database();
-const easyLifeList = db.collection('easyLifeList')
+const recordList = db.collection('easyLife_record')
 Page({
 
   /**
@@ -82,7 +82,7 @@ Page({
 
 
     //操作数据库
-    easyLifeList.get({
+    recordList.get({
       success: function(res) {
         // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
         console.log(res.data)

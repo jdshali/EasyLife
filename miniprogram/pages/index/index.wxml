@@ -1,5 +1,5 @@
 <!--miniprogram/pages/index.wxml-->
-<view class="c-top_box">
+<!-- <view class="c-top_box">
   <van-row class="top_box-section__title">
     <van-col span="6">
       <text class="title-first">2020年</text>
@@ -25,6 +25,32 @@
       <text class="small-desc">00</text>
     </van-col>
   </van-row>
+</view> -->
+
+<view class="c-top_box"> 
+  <view class="top-first">
+    <view class="title-top ui-ml-40">2020年</view>
+    <view class="title-bottom ui-ml-40 title-bottom__first">
+      <picker mode="date" fields="month" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="section__title">
+          04<text class="small-desc">月</text>
+          <van-icon name="https://p8.maiyaole.com/fky/img/bd_item/down_arrow.png" size="36rpx" custom-class="down-arrow__icon"/>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="top-second">
+    <view class="title-top">收入</view>
+    <view class="title-bottom">
+      23.<text class="small-desc">9</text>
+    </view>
+  </view>
+  <view class="top-third">
+    <view class="title-top">支出</view>
+    <view class="title-bottom">
+      12.<text class="small-desc">9</text>
+    </view>
+  </view>
 </view>
 
 <!-- 详情 -->
